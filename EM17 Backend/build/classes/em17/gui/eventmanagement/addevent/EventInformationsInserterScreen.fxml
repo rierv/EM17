@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+<?import jfxtras.scene.control.*?>
+<?scenebuilder-classpath-element ../../../libraries/JFXtras2/jfxtras-labs-0.1.jar?>
+
+<GridPane id="AnchorPane" fx:id="gridPane" alignment="center" hgap="10" maxHeight="-Infinity"  maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1280.0" stylesheets="file:res/style/Em17MainStyle.css" vgap="10" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="em17.gui.eventmanagement.addevent.EventInformationsInserterScreenAdapter">
+    <padding><Insets bottom="25" left="25" right="25" top="25" /></padding>
+    <children>
+        <Label fx:id="userNameText" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" styleClass="importantLabel">
+         <GridPane.margin>
+            <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+         </GridPane.margin></Label>
+      <TextField fx:id="nameTextField" promptText="Event name" GridPane.columnSpan="4" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="16.0" left="32.0" right="32.0" top="16.0" />
+         </GridPane.margin>
+      </TextField>
+      <ComboBox fx:id="eventTypeComboBox" prefHeight="40.0" prefWidth="280.0" promptText="Event type" GridPane.columnIndex="4" GridPane.rowIndex="3">
+         <GridPane.margin>
+            <Insets bottom="16.0" left="32.0" right="32.0" top="16.0" />
+         </GridPane.margin>
+      </ComboBox>
+      <TextField fx:id="locationTextField" promptText="Event location" GridPane.columnSpan="5" GridPane.rowIndex="4">
+         <GridPane.margin>
+            <Insets bottom="16.0" left="32.0" right="32.0" top="16.0" />
+         </GridPane.margin>
+      </TextField>
+      <TextArea fx:id="descriptionTextField" prefHeight="200.0" prefWidth="200.0" promptText="Event description" GridPane.columnSpan="5" GridPane.rowIndex="5">
+         <GridPane.margin>
+            <Insets bottom="16.0" left="32.0" right="32.0" top="16.0" />
+         </GridPane.margin>
+      </TextArea>
+      
+      <LocalDateTimeTextField fx:id="startDateTime" promptText="Start date and time" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+         <GridPane.margin>
+         </GridPane.margin>
+      </LocalDateTimeTextField>
+      
+      <ImageView fx:id="startingTimeImage" fitHeight="71.0" fitWidth="113.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="0" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP">
+         <image>
+            <Image url="file:res/img/hourglass/hourglassFull.png" />
+         </image>
+      </ImageView>
+      
+      <LocalDateTimeTextField fx:id="endDateTime" prefWidth="150.0" promptText="End date and time" GridPane.columnIndex="3" GridPane.columnSpan="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+         <GridPane.margin>
+         </GridPane.margin>
+      </LocalDateTimeTextField>
+      
+      <ImageView fx:id="endingTimeImage" fitHeight="69.0" fitWidth="109.0" pickOnBounds="true" preserveRatio="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="TOP">
+         <image>
+            <Image url="file:res/img/hourglass/hourglassEmpty.png" />
+         </image>
+      </ImageView>
+      
+      <Button mnemonicParsing="false" onAction="#handleNextButtonPressed" text="Next" GridPane.columnIndex="4" GridPane.halignment="RIGHT" GridPane.rowIndex="7">
+         <GridPane.margin>
+         </GridPane.margin>
+      </Button>
+      <Button mnemonicParsing="false" onAction="#handleCancelButtonPressed" text="Cancel" GridPane.halignment="LEFT" GridPane.rowIndex="7">
+         <GridPane.margin>
+         </GridPane.margin>
+      </Button>
+      <Label fx:id="addOrEditEventLabel" text="Add an event" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" styleClass="boldLabel" />
+      <Label text="Basic informations" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+    </children>
+    
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="40.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="10.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="11.0" prefWidth="100.0" />
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="29.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+        <RowConstraints minHeight="10.0" percentHeight="10.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="12.5" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="12.5" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="20.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="25.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="5.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    
+</GridPane>

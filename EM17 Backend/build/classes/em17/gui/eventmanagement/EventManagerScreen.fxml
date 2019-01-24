@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.*?>
+
+<GridPane prefHeight="690.0" prefWidth="1220.0" styleClass="root" stylesheets="file:res/style/Em17MainStyle.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="em17.gui.eventmanagement.EventManagerScreenAdapter">
+    <padding><Insets bottom="32" left="32" right="32" top="32" /></padding>
+    <columnConstraints>
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="39.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="15.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="14.0" prefWidth="100.0" />
+        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="18.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+        <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="540.0" minHeight="10.0" percentHeight="85.0" prefHeight="511.0" vgrow="SOMETIMES" />
+        <RowConstraints maxHeight="50.0" minHeight="0.0" percentHeight="5.0" prefHeight="29.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    <children>
+        <Label text="Event management" GridPane.columnSpan="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+        <TableView fx:id="eventTable" fixedCellSize="0.0" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="1">
+            <columns>
+                <TableColumn fx:id="eventIdColumn" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="eventNameColumn" prefWidth="110.0" text="Name" />
+                <TableColumn fx:id="eventLocationColumn" prefWidth="115.0" text="Location" />
+                <TableColumn fx:id="eventStartDateColumn" prefWidth="151.0" text="Start Date" />
+                <TableColumn fx:id="eventStartTimeColumn" prefWidth="151.0" text="Start Time" />
+                <TableColumn fx:id="eventEndDateColumn" minWidth="0.0" prefWidth="151.0" text="End Date" />
+                <TableColumn fx:id="eventEndTimeColumn" minWidth="0.0" prefWidth="141.0" text="End Time" />
+                <TableColumn fx:id="eventSoldTicketsColumn" prefWidth="110.0" text="Event Type" />
+            </columns>
+        </TableView>
+        <Button mnemonicParsing="false" onAction="#handleAddEventButtonAction" text="New event" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </GridPane.margin>
+        </Button>
+        <Button fx:id="modifyEventButton" mnemonicParsing="false" onAction="#handleModifyEventButtonAction" text="Edit" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER">
+            <GridPane.margin>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </GridPane.margin>
+        </Button>
+        <Button fx:id="deleteEventButton" mnemonicParsing="false" onAction="#handleDeleteEventButtonAction" text="Delete" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </GridPane.margin>
+        </Button>
+        <Button fx:id="viewEventStatsButton" mnemonicParsing="false" onAction="#handleViewStatsForEventButtonAction" prefHeight="33.0" prefWidth="192.0" text="View stats" textAlignment="CENTER" wrapText="true" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2">
+            <GridPane.margin>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </GridPane.margin>
+        </Button>
+    </children>
+</GridPane>

@@ -1,0 +1,30 @@
+ISTRUZIONI PER ACCEDERE AD AMAZON RDS
+
+-Accedere al sito https://aws.amazon.com/it/
+-Cliccare su "Accedi alla Console"
+-Inserire le seguenti credenziali
+	Email: mau.moraca@gmail.com
+	Password: gruppo3INGSW
+-In "All services", recarsi alla sezione "Database" e cliccare su "Relational Database Service"
+-Nella Dashboard alla sinistra dello schermo cliccare su "Instances"
+-Cliccare su "em17db"
+
+ISTRUZIONI PER CONNETTERE IL PROPRIO CLIENT MYSQL AD AMAZON RDS
+
+-Installare un client mysql
++Per connettersi ed operare mediante prompt dei comandi
+	-digitare: "mysql -h em17db.ccitbqoejkbc.eu-west-1.rds.amazonaws.com -P 3306 -u gruppo3 -p"
+	-premere invio e dgitare la password: "progettoem17"
++Per connettersi ed operare mediante MySql Workbench (scelta consigliata)
+	-entrare in MySql Workbench
+	-in MySql Connections cliccare su "+"
+	-alla voce "Connection Name" scrivere "AmazonRDS" (in realtà potete scrivere quello che vi pare xD)
+	-in "HostName" scrivere "em17db.ccitbqoejkbc.eu-west-1.rds.amazonaws.com"
+	-in "Username" scrivere "gruppo3"
+	-cliccare su "Test Connection"
+	-digitare la password "progettoem17"
+	-cliccare su "Ok"
+
+Il database si trova nello schema "em17db"
+
+

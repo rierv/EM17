@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<GridPane id="AnchorPane" alignment="center" hgap="10" prefHeight="742.0" prefWidth="883.0" 
+          styleClass="root" stylesheets="@../../../style/Em17MainStyle.css" vgap="10" 
+          xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" 
+          fx:controller="em17.gui.authentication.AuthenticationScreenAdapter">
+    
+    <padding><Insets bottom="-200.0" left="15.0" right="15.0" top="-200.0" /></padding>
+    
+    <children>
+        <Text id="title-text" text="EventManager-17">
+            <GridPane.halignment>CENTER</GridPane.halignment>
+            <GridPane.valignment>BOTTOM</GridPane.valignment>
+            <GridPane.margin>
+                <Insets bottom="16.0" left="16.0" right="16.0" top="16.0" />
+            </GridPane.margin>
+         <font>
+            <Font name="Cambria Math" size="47.0" />
+         </font>
+        </Text>
+
+        <TextField fx:id="emailTextField" maxWidth="200.0" minWidth="-Infinity" promptText="Email" GridPane.rowIndex="3">
+            <GridPane.halignment>CENTER</GridPane.halignment>
+            <GridPane.valignment>CENTER</GridPane.valignment>
+            <GridPane.margin>
+                <Insets bottom="16.0" left="128.0" right="128.0" top="16.0" />
+            </GridPane.margin>
+        </TextField>
+
+        <PasswordField fx:id="passwordField" maxWidth="200.0" promptText="Password" GridPane.rowIndex="4">
+            <GridPane.halignment>CENTER</GridPane.halignment>
+            <GridPane.valignment>CENTER</GridPane.valignment>
+            <GridPane.margin>
+                <Insets bottom="16.0" left="128.0" right="128.0" top="16.0" />
+            </GridPane.margin>
+        </PasswordField>
+
+        <Button onAction="#handleLoginButtonAction" text="Sign In" GridPane.rowIndex="5">
+            <GridPane.halignment>CENTER</GridPane.halignment>
+            <GridPane.valignment>CENTER</GridPane.valignment>
+            <GridPane.margin>
+                <Insets bottom="16.0" left="128.0" right="128.0" top="16.0" />
+            </GridPane.margin>
+        </Button>
+         <Text id="welcome-text" text="Welcome! Login to manage your events" GridPane.halignment="CENTER" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+      <Pane maxHeight="100.0" maxWidth="150.0" prefHeight="69.0" prefWidth="45.0" styleClass="image" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+    </children>
+    
+    <columnConstraints>
+      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" percentWidth="100.0" prefWidth="100.0" />
+    </columnConstraints>
+    <rowConstraints>
+      <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="140.60000000000002" minHeight="5.300000000000011" percentHeight="10.0" prefHeight="140.60000000000002" vgrow="SOMETIMES" />
+      <RowConstraints maxHeight="135.3" minHeight="0.0" percentHeight="10.0" prefHeight="0.0" vgrow="SOMETIMES" />
+      <RowConstraints minHeight="10.0" percentHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+    </rowConstraints>
+    
+</GridPane>

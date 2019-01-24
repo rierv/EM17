@@ -1,0 +1,10 @@
+drop table soldTicket_table;
+drop table ticketInspector_table;
+drop table identificator_table;
+drop table customer_table;
+drop table prices_table;
+drop table event_table;
+drop table turnstile_table;
+drop table sector_table;
+drop table location_table;
+drop table user_table;
