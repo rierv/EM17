@@ -1,0 +1,46 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="32dp"
+    android:weightSum="100">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_weight="64"
+        android:layout_height="0px">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo"
+            android:padding="16dp"
+            android:layout_marginBottom="64dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/downloadTicketsButton"
+        android:text="@string/downloadTicketsButtonText"
+        android:layout_width="match_parent"
+        android:layout_weight="12"
+        android:layout_height="0px"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/controlTicketsButton"
+        android:text="@string/controlTicketsButtonText"
+        android:layout_width="match_parent"
+        android:layout_weight="12"
+        android:layout_height="0px"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/uploadControlsButton"
+        android:text="@string/uploadControlsButtonText"
+        android:layout_width="match_parent"
+        android:layout_weight="12"
+        android:layout_height="0px"/>
+
+</LinearLayout>
